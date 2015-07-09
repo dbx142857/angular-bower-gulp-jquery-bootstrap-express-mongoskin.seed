@@ -1,0 +1,10 @@
+node_modules/
+temp/
+.idea/
+config-bak/
+env-config.js
+tools/privite
+dev/
+bower_components/
+fileSample/
+cogtu.app.js

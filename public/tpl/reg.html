@@ -1,0 +1,39 @@
+<form name="form" ng-if="!baseService.username" class="form-horizontal">
+    <fieldset>
+        <legend>用户注册</legend>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
+            <div class="col-sm-10">
+                <input ng-focus="hideError($event)" ng-blur="checkFormValue($event)" ng-model="formData.advertisers_name" name="advertisers_name" type="text" class="form-control" id="inputEmail3" placeholder="你的账户名称,用于登录">
+                <p class="help-block reg-error">账户格式错误(长度应在6-16,不包含特殊字符)</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail33" class="col-sm-2 control-label">邮箱</label>
+            <div class="col-sm-10">
+                <input ng-focus="hideError($event)" ng-blur="checkFormValue($event)" ng-model="formData.advertisers_email" name="advertisers_email" type="text" class="form-control" id="inputEmail33" placeholder="请输入你的邮箱">
+                <p class="help-block reg-error">邮箱格式错误</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+            <div class="col-sm-10">
+                <input ng-focus="hideError($event)" ng-blur="checkFormValue($event)" ng-model="formData.advertisers_password" name="advertisers_password" type="password" class="form-control" id="inputPassword3" placeholder="请设置你的密码">
+                <p class="help-block reg-error">密码格式错误(长度6-16,只允许字母数字下划线,且必须字母开头)</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword4" class="col-sm-2 control-label">重复密码</label>
+            <div class="col-sm-10">
+                <input ng-focus="hideError($event)" ng-blur="checkFormValue($event)" ng-model="formData.re_advertisers_password" name="re_advertisers_password" type="password" class="form-control" id="inputPassword4" placeholder="再次输入你设置的密码">
+                <p class="help-block reg-error">两次密码输入不一致哦</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button ng-click="register($event)" type="button" class="btn btn-default">注册</button>
+                <button type="reset" type="button" class="btn btn-default">重置</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>知图的广告投放</title>
+    <link type="text/css" rel="stylesheet" href="stylesheets/base.css">
+
+
+    <!--<link type="text/css" rel="stylesheet" href="http://lib.sinaapp.com/js/bootstrap/latest/css/bootstrap.min.css">-->
+    <!--<link type="text/css" rel="stylesheet"-->
+          <!--href="http://lib.sinaapp.com/js/bootstrap/latest/css/bootstrap-theme.min.css">-->
+    <!--<link type="tex/css" rel="stylesheet" href="stylesheets/style.css">-->
+    <!--<script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>-->
+    <!--<script src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular.min.js"></script>-->
+    <!--<script src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular-route.min.js"></script>-->
+    <!--&lt;!&ndash;<script src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular-animate.min.js"></script>&ndash;&gt;-->
+    <!--&lt;!&ndash;<script src="javascripts/lib/angular-ui-router.min.js"></script>&ndash;&gt;-->
+    <!--<script src="http://lib.sinaapp.com/js/bootstrap/latest/js/bootstrap.min.js"></script>-->
+    <!--<script src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular-animate.min.js"></script>-->
+    <!--<script src="javascripts/lib/angular-ui-router.min.js"></script>-->
+    <!--<script src="javascripts/minified/js/main.min.js"></script>-->
+
+
+    <link type="text/css" rel="stylesheet" href="stylesheets/lib/bootstrap.min.css">
+    <!--<link type="text/css" rel="stylesheet" href="stylesheets/lib/bootstrap-theme.min.css">-->
+    <link type="tex/css" rel="stylesheet" href="stylesheets/style.css">
+
+    <!--<script src="javascripts/lib/jquery-2.0.3.min.js"></script>-->
+    <!--<script src="javascripts/lib/angular.min.js"></script>-->
+    <!--<script src="javascripts/lib/angular-route.min.js"></script>-->
+    <!--<script src="javascripts/lib/ui-bootstrap-tpls-0.13.0.min.js"></script>-->
+
+
+    <!--<script src="javascripts/lib/bootstrap.min.js"></script>-->
+
+
+    <!--<script src="components/layer/layer.js"></script>-->
+
+
+
+
+    <!--<script src="javascripts/main.js"></script>-->
+
+
+    <!--<script src="javascripts/common.js"></script>-->
+
+
+    <!--<script src="javascripts/config.js"></script>-->
+    <!--<script src="javascripts/baseService.js"></script>-->
+    <!--<script src="javascripts/baseController.js"></script>-->
+
+    <!--<script src="javascripts/router.js"></script>-->
+
+
+
+    <!--<script src="javascripts/homeController.js"></script>-->
+    <!--<script src="javascripts/loginController.js"></script>-->
+    <!--<script src="javascripts/regController.js"></script>-->
+
+
+    <!--<script src="javascripts/accountController.js"></script>-->
+    <!--<script src="javascripts/logoutController.js"></script>-->
+    <!--<script src="javascripts/reportController.js"></script>-->
+    <!--<script src="javascripts/adController.js"></script>-->
+    <!--<script src="javascripts/ad_plan_manageController.js"></script>-->
+    <!--<script src="javascripts/ad_plan_newController.js"></script>-->
+    <!--<script src="javascripts/ad_unit_newController.js"></script>-->
+    <!--<script src="javascripts/ad_unit_manageController.js"></script>-->
+    <!--<script src="javascripts/ad_manageController.js"></script>-->
+    <!--<script src="javascripts/ad_newController.js"></script>-->
+    <!--<script src="javascripts/ad_modifyController.js"></script>-->
+    <!--<script src="javascripts/ad_plan_modifyController.js"></script>-->
+    <!--<script src="javascripts/ad_unit_modifyController.js"></script>-->
+    <!--<script src="javascripts/advertisers_area_reportController.js"></script>-->
+    <!--<script src="javascripts/advertisers_overview_reportController.js"></script>-->
+    <!--<script src="javascripts/advertisers_project_reportController.js"></script>-->
+    <!--<script src="javascripts/advertisers_campaign_reportController.js"></script>-->
+    <!--<script src="javascripts/advertisers_ad_reportController.js"></script>-->
+    <!--<script src="javascripts/advertisers_day_reportController.js"></script>-->
+
+
+    <script src="minified/js/main.min.js"></script>
+
+
+
+
+
+    <script>
+        var layeralert=layer.alert;
+        layer.alert=function(str){
+            layeralert(str);
+            setTimeout(function(){
+                $('.layui-layer-dialog').each(function(){
+                    var h=$(this).outerHeight();
+                    $(this).css({
+                        top:(document.body.clientHeight-h)/2+'px'
+                    })
+                })
+            },200);
+
+        }
+
+    </script>
+</head>
+<body ng-app="cogtu.ad" ng-controller="baseController">
+<div ng-show="baseService.isChangingRoute" ng-include src="'tpl/loading.html'"></div>
+<div id="header" ng-include src="'tpl/header.html'"></div>
+<div id="container" >
+    <div class="page-view" id="view" ng-view></div>
+</div>
+<div ng-include src="'tpl/footer.html'"></div>
+
+<cards-layout></cards-layout>
+</body>
+</html>

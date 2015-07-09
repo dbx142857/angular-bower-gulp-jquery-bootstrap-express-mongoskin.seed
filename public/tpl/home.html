@@ -1,0 +1,18 @@
+<div ng-if="!baseService.username" class="jumbotron">
+        <h1>Hello, world!</h1>
+
+        <p>知图科技是一家位于北京和加州的人工智能广告公司。由前世界500强高管、美国顶尖院校科学家以及中国连续创业者一起创办。知图科技是图片内嵌原生广告的缔造者，
+            即根据互联网媒体上的图片和文字内容信息及用户行为自动将合适的广告以原生的方式植入图片内，实现一种全新、高效的广告投放。</p>
+
+        <p>
+            <a class="btn btn-primary btn-large" ng-href="{{CONFIG.LOGIN_URL}}">登录</a>
+            <!--<a class="btn btn-large" ng-href="{{CONFIG.REG_URL}}">立即注册</a>-->
+        </p>
+</div>
+
+
+<div ng-if="baseService.username">
+    <h1 style="display:inline-block;">{{baseService.username}}</h1>,welcome!
+    <!--<a target="_blank" ng-href="/report/advertisersTable/overViewTable.html?userid={{baseService.user.advertisers_id}}">报表</a>-->
+    <!--<button ng-click="location.href='http://172.16.1.5:9000/report/advertisersTable/overViewTable.html?userid='+baseService.user.advertisers_id;">跳转到报表页面</button>-->
+</div>
